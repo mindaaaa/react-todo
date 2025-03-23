@@ -11,6 +11,11 @@ export default function AddTodoForm({ addTodo }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!text.trim()) {
+      return;
+    }
+
     addTodo({ id: uuidv4(), text, status: 'active' });
 
     setText('');
