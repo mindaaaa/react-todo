@@ -1,5 +1,6 @@
 import { IoAdd } from 'react-icons/io5';
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function AddTodoForm({ addTodo }) {
   const [text, setText] = useState('');
@@ -10,7 +11,9 @@ export default function AddTodoForm({ addTodo }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTodo({ id: '임시 저장', text, status: 'active' });
+    addTodo({ id: uuidv4(), text, status: 'active' });
+
+    setText('');
   };
 
   return (
