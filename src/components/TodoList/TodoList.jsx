@@ -4,9 +4,9 @@ import Todo from './Todo.jsx';
 
 export default function TodoList() {
   const [todos, setTodos] = useState([
-    { id: 1, text: '강의 듣기', status: 'active' },
-    { id: 2, text: '점심 먹기', status: 'completed' },
-    { id: 3, text: '스터디 카페', status: 'completed' },
+    { id: 1, text: '강의 듣기', status: 'todo' },
+    { id: 2, text: '점심 먹기', status: 'done' },
+    { id: 3, text: '스터디 카페', status: 'done' },
   ]);
 
   const handleAddTodo = (todo) => setTodos([...todos, todo]);
